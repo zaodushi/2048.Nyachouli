@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(255, 253, 235, 0.5);
+    animation: slideInDown 1s;
+}
+
+#title {
+    margin-left: 2vw;
+    color: rgb(129, 179, 255);
+    font-size: 9vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+#nya {
+    color: rgb(255, 127, 255);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    clear: both;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(./pinkbg_2.png);
+    background-repeat: repeat;
+    filter: blur(5px);
+}
+
+
+#logo {
+    width: 10vh;
+    height: 10vh;
+}
+
+#logo:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 0, 255));
+}
+
+#sub-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20vh;
+    height: 12vh;
+    font-size: 3vh;
+    background-color: rgba(255, 253, 235, 0.5);
+    border-radius: 1vh;
+    text-align: center;
+    margin: 5vh;
+    animation: fadeIn 1s;
+}
+
+#score-container {
+    margin-top: 1vh;
+    width: 20vh;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(129, 179, 255);
+    font-weight: 800;
+}
+
+#restart {
+    width: 14vh;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: rgb(255, 95, 95);
+    color: rgb(255, 182, 182);
+    font-weight: 800;
+}
+
+#restart:hover {
+    cursor: pointer;
+}
+
+.game-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 6vmin;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255, 253, 235, 0.5);
+    width: 80vmin;
+    height: 80vmin;
+    overflow: hidden;
+    border-radius: 2vmin;
+    animation: zoomIn 1s;
+}
+
+.row {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-family: Kristen ITC, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row > div {
+    text-align: center;
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1vmin;
+    margin: 1vmin;
+    line-height: 16vmin;
+}
+
+.unit-0 {
+    background-color: rgba(255, 253, 235, 0.5);
+    color: rgba(0, 0, 0, 0);
+}
+
+.unit-2 {
+    font-size: 14vmin;
+    color:  rgb(255, 224, 49);
+    background-color: rgb(253, 244, 158);
+}
+
+.unit-4 {
+    font-size: 14vmin;
+    color:  rgb(255, 214, 81);
+    background-color: rgb(255, 242, 120);
+}
+
+.unit-8 {
+    font-size: 14vmin;
+    width: 18vmin;
+    color:  rgb(255, 221, 29);
+    background-color: rgb(255, 255, 76);
+}
+
+.unit-16 {
+    font-size: 12vmin;
+    color: rgb(255, 203, 34);
+    background-color: rgb(255, 235, 60);
+}
+
+.unit-32 {
+    font-size: 12vmin;
+    color:  rgb(255, 232, 128);
+    background-color: rgb(255, 204, 36);
+}
+
+.unit-64 {
+    font-size: 12vmin;
+    color: rgb(255, 223, 163);
+    background-color: rgb(255, 173, 49);
+}
+
+.unit-128 {
+    font-size: 9vmin;
+    color: rgb(255, 205, 68);
+    background-color: rgb(255, 110, 43);
+}
+
+.unit-256 {
+    font-size: 9vmin;
+    color: rgb(255, 180, 95);
+    background-color: rgb(255, 67, 67);
+}
+
+.unit-512 {
+    font-size: 9vmin;
+    color: rgb(255, 163, 255);
+    background-color: rgba(255, 108, 211, 1);
+}
+
+.unit-1024 {
+    font-size: 7vmin;
+    color: rgb(255, 138, 245);
+    background-color: rgba(255, 0, 200, 1);
+}
+
+.unit-2048 {
+    font-size: 7vmin;
+    color: rgb(255, 124, 233);
+    background-color: rgb(248, 36, 135);
+    
+}
+
+.unit-4096 {
+    font-size: 7vmin;
+    color: rgb(158, 216, 255);
+    background-color: rgb(58, 61, 236);
+}
+
+.unit-8192 {
+    font-size: 7vmin;
+    color: rgb(202, 144, 255);
+    background-color: rgb(124, 57, 187);
+}
+
+@media screen and (max-width: 1000px) {
+    #background {
+        background-image: url(./pinkbg_long.png);
+    }
+    #title{
+        font-size: 10vmin;
+    }
+}
+
+@keyframes generate {
+    0% {
+        font-size: 0;
+        margin: 10vmin;
+        width: 0;
+        height: 0;
+        background-color: rgba(92, 177, 226, 0);
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        font-size: 14vmin;
+        width: 18vmin;
+        height: 18vmin;
+        margin: 1vmin;
+        background-color: rgb(255, 244, 206);
+    }
+}

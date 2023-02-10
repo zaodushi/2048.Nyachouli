@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(255, 253, 235, 0.5);
+    animation: slideInDown 1s;
+}
+
+#title {
+    margin-left: 2vw;
+    color: rgb(129, 179, 255);
+    font-size: 9vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+#nya {
+    color: rgb(255, 127, 255);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    clear: both;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(./pinkbg_2.png);
+    background-repeat: repeat;
+    filter: blur(5px);
+}
+
+
+#logo {
+    width: 10vh;
+    height: 10vh;
+}
+
+#logo:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 0, 255));
+}
+
+#sub-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20vh;
+    height: 12vh;
+    font-size: 3vh;
+    background-color: rgba(255, 253, 235, 0.5);
+    border-radius: 1vh;
+    text-align: center;
+    margin: 5vh;
+    animation: fadeIn 1s;
+}
+
+#score-container {
+    margin-top: 1vh;
+    width: 20vh;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(129, 179, 255);
+    font-weight: 800;
+}
+
+#restart {
+    width: 14vh;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: rgb(255, 95, 95);
+    color: rgb(255, 182, 182);
+    font-weight: 800;
+}
+
+#restart:hover {
+    cursor: pointer;
+}
+
+.game-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 6vmin;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255, 253, 235, 0.5);
+    width: 80vmin;
+    height: 80vmin;
+    overflow: hidden;
+    border-radius: 2vmin;
+    animation: zoomIn 1s;
+}
+
+.row {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-family: Kristen ITC, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row > div {
+    text-align: center;
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1vmin;
+    margin: 1vmin;
+    line-height: 16vmin;
+}
+
+.unit-0 {
+    background-color: rgba(255, 253, 235, 0.5);
+    color: rgba(0, 0, 0, 0);
+}
+
+.unit-2 {
+    font-size: 14vmin;
+    color:  #c3fdc6;
+    background-color: #6cfc74;
+}
+
+.unit-4 {
+    font-size: 14vmin;
+    color:  #b3ffc1;
+    background-color: #6bee82;
+}
+
+.unit-8 {
+    font-size: 14vmin;
+    width: 18vmin;
+    color:  #a9f7c2;
+    background-color: #6ae090;
+}
+
+.unit-16 {
+    font-size: 12vmin;
+    color: #9ff5ca;
+    background-color: #69d29e;
+}
+
+.unit-32 {
+    font-size: 12vmin;
+    color:  #a0ebd7;
+    background-color: #68c4ac;
+}
+
+.unit-64 {
+    font-size: 12vmin;
+    color: #a2e4e7;
+    background-color: #67b6ba;
+}
+
+.unit-128 {
+    font-size: 9vmin;
+    color: #a2d6f0;
+    background-color: #66a8c8;
+}
+
+.unit-256 {
+    font-size: 9vmin;
+    color: #a4c6ec;
+    background-color: #659ad6;
+}
+
+.unit-512 {
+    font-size: 9vmin;
+    color: rgb(143, 188, 255);
+    background-color: #648ce4;
+}
+
+.unit-1024 {
+    font-size: 7vmin;
+    color: rgb(125, 165, 253);
+    background-color: #6484f4;
+}
+
+.unit-2048 {
+    font-size: 7vmin;
+    color: rgb(173, 174, 252);
+    background-color: #7480e6;
+    
+}
+
+.unit-4096 {
+    font-size: 7vmin;
+    color: rgb(188, 173, 255);
+    background-color: #847cd8;
+}
+
+.unit-8192 {
+    font-size: 7vmin;
+    color: rgb(202, 144, 255);
+    background-color: #9478ca;
+}
+
+.unit-16384 {
+    color: rgb(226, 153, 220);
+    background-color: #a474bc;
+    font-size: 6vmin;
+}
+
+.unit-32768 {
+    color: #e9b0e4;
+    background-color: #b470ae;
+    font-size: 6vmin;
+}
+
+@media screen and (max-width: 1000px) {
+    #background {
+        background-image: url(./pinkbg_long.png);
+    }
+    #title{
+        font-size: 10vmin;
+    }
+}
+
+@keyframes generate {
+    0% {
+        font-size: 0;
+        margin: 10vmin;
+        width: 0;
+        height: 0;
+        background-color: rgba(92, 177, 226, 0);
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        font-size: 14vmin;
+        width: 18vmin;
+        height: 18vmin;
+        margin: 1vmin;
+        background-color: #6cfc74;
+    }
+}
